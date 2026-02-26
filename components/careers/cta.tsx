@@ -4,7 +4,7 @@ import { ArrowRight, Mail } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-10">
       <div className="container mx-auto px-4 md:px-6">
         <Card className="relative overflow-hidden p-12 md:p-20">
           {/* Background gradient */}
@@ -23,9 +23,6 @@ export function CTA() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                View All Positions <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
               <Button size="lg" variant="outline" className="border-primary/30">
                 <Mail className="mr-2 h-4 w-4" />
                 Contact Us

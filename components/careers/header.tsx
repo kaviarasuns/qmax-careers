@@ -24,9 +24,6 @@ export function Header() {
           <Link href="#internships" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
             Internships
           </Link>
-          <Link href="#why-join" className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors">
-            Why Join
-          </Link>
         </div>
 
         <div className="hidden md:block">
@@ -57,9 +54,6 @@ export function Header() {
             </Link>
             <Link href="#internships" className="text-sm font-medium text-foreground/70">
               Internships
-            </Link>
-            <Link href="#why-join" className="text-sm font-medium text-foreground/70">
-              Why Join
             </Link>
             <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
               Apply Now

@@ -75,6 +75,7 @@
 }
 
 @theme inline {
+  --color-brand-red: #F33117;
   --font-sans: 'Geist', 'Geist Fallback';
   --font-mono: 'Geist Mono', 'Geist Mono Fallback';
   --color-background: var(--background);

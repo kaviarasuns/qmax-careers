@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button'
 import { ChevronDown } from 'lucide-react'
 
 const positions = [
-  { 
-    id: 1, 
-    title: 'Hardware Design Engineer', 
-    category: 'Engineering', 
+  {
+    id: 1,
+    title: 'Hardware Design Engineer',
+    category: 'Engineering',
     level: 'Mid-Senior',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -36,10 +36,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Electrical Engineering or related field', 'Master\'s degree preferred']
   },
-  { 
-    id: 2, 
-    title: 'Firmware Development Engineer', 
-    category: 'Engineering', 
+  {
+    id: 2,
+    title: 'Firmware Development Engineer',
+    category: 'Engineering',
     level: 'Mid-Senior',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -65,10 +65,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Computer Engineering, Electrical Engineering, or related field']
   },
-  { 
-    id: 3, 
-    title: 'Embedded Systems Test Engineer', 
-    category: 'Engineering', 
+  {
+    id: 3,
+    title: 'Embedded Systems Test Engineer',
+    category: 'Engineering',
     level: 'Entry',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -94,10 +94,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Computer Science, Engineering, or related field']
   },
-  { 
-    id: 4, 
-    title: 'RF Design Engineer', 
-    category: 'Engineering', 
+  {
+    id: 4,
+    title: 'RF Design Engineer',
+    category: 'Engineering',
     level: 'Mid-Senior',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -123,10 +123,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Electrical Engineering with RF specialization']
   },
-  { 
-    id: 5, 
-    title: 'Signal Integrity (SI) Engineer', 
-    category: 'Engineering', 
+  {
+    id: 5,
+    title: 'Signal Integrity (SI) Engineer',
+    category: 'Engineering',
     level: 'Mid-Senior',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -152,10 +152,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Electrical Engineering']
   },
-  { 
-    id: 6, 
-    title: 'PCB Designer', 
-    category: 'Engineering', 
+  {
+    id: 6,
+    title: 'PCB Designer',
+    category: 'Engineering',
     level: 'Entry-Mid',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -181,10 +181,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Electrical Engineering or equivalent experience']
   },
-  { 
-    id: 7, 
-    title: 'PCB Librarian', 
-    category: 'Engineering', 
+  {
+    id: 7,
+    title: 'PCB Librarian',
+    category: 'Engineering',
     level: 'Entry-Mid',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -210,10 +210,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Electrical Engineering or related field']
   },
-  { 
-    id: 8, 
-    title: 'Mechanical Design Engineer', 
-    category: 'Engineering', 
+  {
+    id: 8,
+    title: 'Mechanical Design Engineer',
+    category: 'Engineering',
     level: 'Mid-Senior',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -239,10 +239,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Mechanical Engineering']
   },
-  { 
-    id: 9, 
-    title: 'Industrial Designer', 
-    category: 'Design', 
+  {
+    id: 9,
+    title: 'Industrial Designer',
+    category: 'Design',
     level: 'Mid-Senior',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -268,10 +268,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Industrial Design or related field']
   },
-  { 
-    id: 10, 
-    title: 'Full-Stack Web Developer', 
-    category: 'Software', 
+  {
+    id: 10,
+    title: 'Full-Stack Web Developer',
+    category: 'Software',
     level: 'Entry-Mid',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -297,10 +297,10 @@ const positions = [
     ],
     qualifications: ['B.S. in Computer Science or equivalent experience']
   },
-  { 
-    id: 11, 
-    title: 'Business Development Executive', 
-    category: 'Business', 
+  {
+    id: 11,
+    title: 'Business Development Executive',
+    category: 'Business',
     level: 'Entry',
     location: 'San Jose, CA',
     type: 'Full-time',
@@ -326,45 +326,283 @@ const positions = [
     ],
     qualifications: ['B.A. in Business, Marketing, or related field']
   },
+  {
+    id: 12,
+    title: 'Hardware Design Intern',
+    category: 'Engineering',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Support electronic hardware design from architecture and schematics to validation.',
+    responsibilities: [
+      'Assist with block diagrams and schematic capture',
+      'Support component selection and BoM preparation',
+      'Help with bring-up, debugging, and validation activities',
+      'Document design notes and test observations'
+    ],
+    requirements: [
+      'Strong analog and digital electronics fundamentals',
+      'Basic familiarity with power supply and MCU interfacing concepts',
+      'Ability to read datasheets and application notes',
+      'Hands-on lab exposure with DSO and DMM'
+    ],
+    skills: [
+      { category: 'Core', items: ['Analog Electronics', 'Digital Electronics', 'Power Basics'] },
+      { category: 'Tools', items: ['Altium or KiCad', 'DSO', 'DMM'] },
+      { category: 'Work Style', items: ['Documentation', 'Troubleshooting'] }
+    ],
+    qualifications: ['Final-year BE / BTech in ECE, EEE, or related discipline']
+  },
+  {
+    id: 13,
+    title: 'Firmware / Embedded Intern',
+    category: 'Engineering',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Develop and test firmware modules for MCU/MPU-based embedded systems.',
+    responsibilities: [
+      'Implement module-level embedded C code',
+      'Work with peripheral drivers (GPIO, UART, SPI, I2C)',
+      'Support board bring-up and debugging',
+      'Write basic test cases and maintain technical notes'
+    ],
+    requirements: [
+      'Strong C programming fundamentals',
+      'Understanding of MCU architecture and memory basics',
+      'Awareness of RTOS concepts (tasks, queues, ISRs)',
+      'Basic Git workflow familiarity'
+    ],
+    skills: [
+      { category: 'Programming', items: ['C', 'Embedded C'] },
+      { category: 'Interfaces', items: ['GPIO', 'UART', 'SPI', 'I2C'] },
+      { category: 'Tools', items: ['JTAG/SWD Debugging', 'Git'] }
+    ],
+    qualifications: ['Final-year BE / BTech in ECE, CSE, Embedded Systems, or Electrical Engineering']
+  },
+  {
+    id: 14,
+    title: 'RF / Antenna Intern',
+    category: 'Engineering',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Support RF design, simulation, and antenna tuning for wireless products.',
+    responsibilities: [
+      'Assist with RF matching and basic circuit evaluations',
+      'Support antenna tuning and measurement setup',
+      'Help prepare simulation and validation summaries',
+      'Document test observations for team reviews'
+    ],
+    requirements: [
+      'Basic RF fundamentals (S-parameters, VSWR)',
+      'Exposure to RF lab tools is preferred',
+      'Interest in GHz-range wireless systems',
+      'Strong analytical and documentation skills'
+    ],
+    skills: [
+      { category: 'Core', items: ['RF Basics', 'Antenna Concepts', 'Matching Networks'] },
+      { category: 'Tools', items: ['VNA', 'Spectrum Analyzer', 'Signal Generator'] },
+      { category: 'Software', items: ['ADS or HFSS (preferred)'] }
+    ],
+    qualifications: ['Final-year BE / BTech in ECE or related field']
+  },
+  {
+    id: 15,
+    title: 'PCB Design Intern',
+    category: 'Engineering',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Create production-ready PCB layouts and support component library tasks.',
+    responsibilities: [
+      'Assist with multi-layer PCB routing',
+      'Follow DFM/DFA and design-rule constraints',
+      'Support fabrication output checks',
+      'Help maintain symbols and footprints'
+    ],
+    requirements: [
+      'Basic PCB layout fundamentals',
+      'Familiarity with manufacturing constraints',
+      'Attention to detail in footprint and symbol quality',
+      'Collaboration with hardware designers'
+    ],
+    skills: [
+      { category: 'CAD', items: ['Altium Designer', 'KiCad'] },
+      { category: 'Design', items: ['Layout', 'Routing', 'Impedance Basics'] },
+      { category: 'Quality', items: ['DFM', 'Library Management', 'Datasheet Reading'] }
+    ],
+    qualifications: ['Diploma / Final-year BE / BTech in Electronics or related stream']
+  },
+  {
+    id: 16,
+    title: 'Mechanical / Industrial Design Intern',
+    category: 'Design',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Contribute to enclosure design, ergonomics, and product form development.',
+    responsibilities: [
+      'Support 3D modeling and concept development',
+      'Assist with enclosure feasibility and tolerance reviews',
+      'Create concept renders and design documentation',
+      'Collaborate with electronics and mechanical teams'
+    ],
+    requirements: [
+      'Hands-on CAD and product design exposure',
+      'Understanding of manufacturing constraints',
+      'Good visual communication and presentation skills',
+      'Portfolio demonstrating design process'
+    ],
+    skills: [
+      { category: 'Design Tools', items: ['SolidWorks or Fusion 360', 'Rhino', 'KeyShot'] },
+      { category: 'Design Practice', items: ['Ergonomics', 'Styling', 'Concept Development'] },
+      { category: 'Collaboration', items: ['Cross-functional Communication'] }
+    ],
+    qualifications: ['Final-year BE / BTech Mechanical or Bachelor’s in Industrial/Product Design']
+  },
+  {
+    id: 17,
+    title: 'Software / Web Intern',
+    category: 'Software',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Build frontend and backend modules for internal and customer-facing web platforms.',
+    responsibilities: [
+      'Develop UI and API features under mentor guidance',
+      'Support database integration and testing',
+      'Fix bugs and improve code quality',
+      'Participate in release and deployment tasks'
+    ],
+    requirements: [
+      'Strong fundamentals in HTML, CSS, and JavaScript',
+      'Basic React or equivalent framework knowledge',
+      'Backend exposure in Node.js or Python',
+      'Basic SQL and Git familiarity'
+    ],
+    skills: [
+      { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript', 'React'] },
+      { category: 'Backend', items: ['Node.js or Python', 'REST APIs', 'SQL'] },
+      { category: 'Workflow', items: ['Git', 'Debugging', 'Documentation'] }
+    ],
+    qualifications: ['Final-year BE / BTech in CSE / IT or equivalent']
+  },
+  {
+    id: 18,
+    title: 'Testing & Validation Intern',
+    category: 'Engineering',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Test and validate embedded hardware and firmware using structured test methods.',
+    responsibilities: [
+      'Prepare test plans, test cases, and execution reports',
+      'Run functional, regression, and integration tests',
+      'Assist in failure analysis and issue reproduction',
+      'Maintain logs and defect documentation'
+    ],
+    requirements: [
+      'Ability to read schematics and block diagrams',
+      'Strong lab discipline and methodical troubleshooting',
+      'Hands-on DSO and DMM usage',
+      'Basic scripting in Python preferred'
+    ],
+    skills: [
+      { category: 'Testing', items: ['Functional Testing', 'Regression Testing', 'Defect Tracking'] },
+      { category: 'Interfaces', items: ['UART', 'CAN', 'Ethernet', 'USB'] },
+      { category: 'Tools', items: ['DSO', 'DMM', 'Python'] }
+    ],
+    qualifications: ['Diploma / Final-year BE / BTech in Electronics, Electrical, or Instrumentation']
+  },
+  {
+    id: 19,
+    title: 'Business Development Intern',
+    category: 'Business',
+    level: 'Final-year / Recent Graduate',
+    location: 'Chennai, India',
+    type: 'Internship',
+    description: 'Support lead generation, proposal coordination, and business communication workflows.',
+    responsibilities: [
+      'Research and qualify potential leads',
+      'Support client follow-ups and CRM updates',
+      'Assist with proposal and presentation preparation',
+      'Coordinate with engineering teams on requirements'
+    ],
+    requirements: [
+      'Strong written and verbal communication',
+      'Ability to understand technical discussions',
+      'Disciplined follow-up and tracking skills',
+      'Professional email and documentation practices'
+    ],
+    skills: [
+      { category: 'Business', items: ['Lead Generation', 'CRM', 'Proposal Coordination'] },
+      { category: 'Marketing', items: ['SEO Basics', 'Digital Marketing', 'AI Marketing Awareness'] },
+      { category: 'Communication', items: ['Client Interaction', 'Reporting'] }
+    ],
+    qualifications: ['Any Bachelor’s degree; engineering background preferred']
+  }
 ]
 
-function JobCard({ position }: { position: typeof positions[0] }) {
-  const [isExpanded, setIsExpanded] = useState(false)
+const categoryImages: Record<string, string> = {
+  Engineering: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
+  Design: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200',
+  Software: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200',
+  Business: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200',
+}
 
+function JobCard({ position, isExpanded, onToggle }: { position: typeof positions[0]; isExpanded: boolean; onToggle: () => void }) {
   return (
-    <Card className={`overflow-hidden transition-all duration-300 ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}>
-      <div 
-        className="p-6 cursor-pointer hover:bg-muted/50 transition-colors"
-        onClick={() => setIsExpanded(!isExpanded)}
+    <Card className={`overflow-hidden border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}>
+      <div
+        className="cursor-pointer p-6 transition-colors hover:bg-zinc-50"
+        onClick={onToggle}
       >
         <div className="flex items-start justify-between gap-4">
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-foreground">
+            <h3 className="text-lg font-semibold text-zinc-900">
               {position.title}
             </h3>
-            <p className="mt-2 text-sm text-foreground/60">{position.description}</p>
+            <p className="mt-2 text-sm text-zinc-600">{position.description}</p>
             <div className="mt-3 flex flex-wrap gap-2">
-              <Badge variant="secondary">{position.category}</Badge>
-              <Badge variant="outline">{position.level}</Badge>
-              <Badge variant="outline">{position.location}</Badge>
+              <Badge variant="outline" className="border-zinc-300 text-zinc-700">{position.type}</Badge>
+              <Badge className="border border-zinc-300 bg-zinc-100 text-zinc-700 hover:bg-zinc-200">{position.category}</Badge>
             </div>
           </div>
-          <ChevronDown 
-            className={`h-5 w-5 text-primary flex-shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+
+          <div className="hidden h-24 w-40 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 sm:block">
+            <img
+              src={categoryImages[position.category] || categoryImages['Engineering']}
+              alt={`${position.category} role preview`}
+              className="h-full w-full object-cover"
+            />
+          </div>
+
+          <ChevronDown
+            className={`h-5 w-5 flex-shrink-0 text-zinc-500 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
           />
         </div>
       </div>
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-border bg-muted/30 px-6 py-6 space-y-6">
+        <div className="space-y-6 border-t border-zinc-200 bg-zinc-50 px-6 py-6">
+          {/* Image */}
+          <div className="relative h-48 w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 md:h-64">
+            <img
+              src={categoryImages[position.category] || categoryImages['Engineering']}
+              alt={position.title}
+              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+            />
+          </div>
+
           {/* Responsibilities */}
           <div>
-            <h4 className="font-semibold text-foreground mb-3">Key Responsibilities</h4>
+            <h4 className="mb-3 font-semibold text-zinc-900">Key Responsibilities</h4>
             <ul className="space-y-2">
               {position.responsibilities.map((resp, idx) => (
-                <li key={idx} className="flex gap-3 text-sm text-foreground/80">
-                  <span className="text-primary font-semibold">•</span>
+                <li key={idx} className="flex gap-3 text-sm text-zinc-700">
+                  <span className="font-semibold text-zinc-500">•</span>
                   <span>{resp}</span>
                 </li>
               ))}
@@ -373,11 +611,11 @@ function JobCard({ position }: { position: typeof positions[0] }) {
 
           {/* Requirements */}
           <div>
-            <h4 className="font-semibold text-foreground mb-3">Requirements</h4>
+            <h4 className="mb-3 font-semibold text-zinc-900">Requirements</h4>
             <ul className="space-y-2">
               {position.requirements.map((req, idx) => (
-                <li key={idx} className="flex gap-3 text-sm text-foreground/80">
-                  <span className="text-primary font-semibold">•</span>
+                <li key={idx} className="flex gap-3 text-sm text-zinc-700">
+                  <span className="font-semibold text-zinc-500">•</span>
                   <span>{req}</span>
                 </li>
               ))}
@@ -386,14 +624,14 @@ function JobCard({ position }: { position: typeof positions[0] }) {
 
           {/* Skills */}
           <div>
-            <h4 className="font-semibold text-foreground mb-3">Required Skills</h4>
+            <h4 className="mb-3 font-semibold text-zinc-900">Required Skills</h4>
             <div className="space-y-4">
               {position.skills.map((skillGroup, idx) => (
                 <div key={idx}>
-                  <p className="text-sm font-medium text-foreground/70 mb-2">{skillGroup.category}</p>
+                  <p className="mb-2 text-sm font-medium text-zinc-700">{skillGroup.category}</p>
                   <div className="flex flex-wrap gap-2">
                     {skillGroup.items.map((skill, sidx) => (
-                      <Badge key={sidx} variant="outline" className="text-xs">
+                      <Badge key={sidx} variant="outline" className="border-zinc-300 text-xs text-zinc-700">
                         {skill}
                       </Badge>
                     ))}
@@ -405,11 +643,11 @@ function JobCard({ position }: { position: typeof positions[0] }) {
 
           {/* Qualifications */}
           <div>
-            <h4 className="font-semibold text-foreground mb-3">Qualifications</h4>
+            <h4 className="mb-3 font-semibold text-zinc-900">Qualifications</h4>
             <ul className="space-y-2">
               {position.qualifications.map((qual, idx) => (
-                <li key={idx} className="flex gap-3 text-sm text-foreground/80">
-                  <span className="text-primary font-semibold">•</span>
+                <li key={idx} className="flex gap-3 text-sm text-zinc-700">
+                  <span className="font-semibold text-zinc-500">•</span>
                   <span>{qual}</span>
                 </li>
               ))}
@@ -417,8 +655,8 @@ function JobCard({ position }: { position: typeof positions[0] }) {
           </div>
 
           {/* CTA */}
-          <div className="pt-4 border-t border-border">
-            <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+          <div className="border-t border-zinc-200 pt-4">
+            <Button className="w-full bg-zinc-900 text-white hover:bg-zinc-800">
               Apply Now
             </Button>
           </div>
@@ -429,48 +667,79 @@ function JobCard({ position }: { position: typeof positions[0] }) {
 }
 
 export function CurrentOpenings() {
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [selectedTab, setSelectedTab] = useState<'all' | 'interns'>('all')
+  const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>(() => {
+    const initial: Record<number, boolean> = {}
+    positions.forEach(p => (initial[p.id] = true))
+    return initial
+  })
 
-  const categories = ['Engineering', 'Design', 'Software', 'Business']
-  const filteredPositions = selectedCategory 
-    ? positions.filter(p => p.category === selectedCategory)
-    : positions
+  const filteredPositions =
+    selectedTab === 'interns'
+      ? positions.filter(p => p.type.toLowerCase().includes('intern'))
+      : positions.filter(p => !p.type.toLowerCase().includes('intern'))
+
+  const isAllExpanded = filteredPositions.length > 0 && filteredPositions.every(p => expandedCards[p.id])
+
+  const toggleExpandAll = () => {
+    if (isAllExpanded) {
+      const newExpanded = { ...expandedCards }
+      filteredPositions.forEach(p => newExpanded[p.id] = false)
+      setExpandedCards(newExpanded)
+    } else {
+      const newExpanded: Record<number, boolean> = { ...expandedCards }
+      filteredPositions.forEach(p => newExpanded[p.id] = true)
+      setExpandedCards(newExpanded)
+    }
+  }
+
+  const toggleCard = (id: number) => {
+    setExpandedCards(prev => ({ ...prev, [id]: !prev[id] }))
+  }
 
   return (
-    <section id="openings" className="py-20 md:py-32">
+    <section id="openings" className="bg-white py-10 md:py-14">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-12">
-          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Current Openings</h2>
-          <p className="text-lg text-foreground/70">
-            Explore our available full-time positions across engineering, design, software, and business teams.
+        <div className="mb-8">
+          <h2 className="mb-4 text-3xl font-bold text-zinc-900 md:text-4xl">Current Openings</h2>
+          <p className="text-lg text-zinc-600">
+            The following positions are open for full-time roles.
           </p>
         </div>
 
-        {/* Category Filter */}
-        <div className="mb-12 flex flex-wrap gap-3">
-          <Button
-            variant={selectedCategory === null ? 'default' : 'outline'}
-            onClick={() => setSelectedCategory(null)}
-            className={selectedCategory === null ? 'bg-primary text-primary-foreground' : ''}
-          >
-            All Roles
-          </Button>
-          {categories.map(category => (
+        {/* Role Filter */}
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex flex-wrap gap-3">
             <Button
-              key={category}
-              variant={selectedCategory === category ? 'default' : 'outline'}
-              onClick={() => setSelectedCategory(category)}
-              className={selectedCategory === category ? 'bg-primary text-primary-foreground' : ''}
+              variant={selectedTab === 'all' ? 'default' : 'outline'}
+              onClick={() => setSelectedTab('all')}
+              className={selectedTab === 'all' ? 'border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800' : 'border-zinc-300 text-zinc-700 hover:bg-zinc-100'}
             >
-              {category}
+              All Roles
             </Button>
-          ))}
+            <Button
+              variant={selectedTab === 'interns' ? 'default' : 'outline'}
+              onClick={() => setSelectedTab('interns')}
+              className={selectedTab === 'interns' ? 'border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800' : 'border-zinc-300 text-zinc-700 hover:bg-zinc-100'}
+            >
+              Interns
+            </Button>
+          </div>
+
+          <Button variant="ghost" onClick={toggleExpandAll} className="text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900">
+            {isAllExpanded ? 'Collapse All' : 'Expand All'}
+          </Button>
         </div>
 
         {/* Positions Grid */}
         <div className="space-y-4">
           {filteredPositions.map(position => (
-            <JobCard key={position.id} position={position} />
+            <JobCard
+              key={position.id}
+              position={position}
+              isExpanded={!!expandedCards[position.id]}
+              onToggle={() => toggleCard(position.id)}
+            />
           ))}
         </div>
       </div>

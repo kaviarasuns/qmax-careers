@@ -17,29 +17,29 @@ const internshipDomains = [
 const internshipBenefits = [
   {
     icon: Clock,
-    title: 'Flexible Duration',
-    description: '5-6 months standard or 6-12 months for deep-dive projects'
+    title: 'Structured Duration',
+    description: '5-6 months for project-linked internships or 6-12 months for deep R&D tracks'
   },
   {
     icon: TrendingUp,
-    title: 'Career Growth',
-    description: 'Direct pathway to full-time roles with PPO opportunities'
+    title: 'Career Pathway',
+    description: 'High-performing interns are considered for pre-placement offers (PPO)'
   },
   {
     icon: Award,
-    title: 'Recognition & Rewards',
-    description: 'Performance bonuses, certificates, and letters of recommendation'
+    title: 'Stipend & Recognition',
+    description: 'Performance-based stipend, completion bonuses, and excellence recognition'
   },
   {
     icon: CheckCircle2,
-    title: 'Professional Development',
-    description: 'Expert mentorship and real-world product development exposure'
+    title: 'Mentored Learning',
+    description: 'Work with senior engineers through weekly/monthly reviews and real deliverables'
   }
 ]
 
 export function InternshipProgram() {
   return (
-    <section id="internships" className="py-20 md:py-32 bg-card/30">
+    <section id="internships" className="py-14 md:py-20 bg-card/30">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-12">
           <h2 className="mb-4 text-3xl font-bold md:text-4xl">Internship Program</h2>
@@ -123,6 +123,25 @@ export function InternshipProgram() {
                 </div>
               ))}
             </div>
+          </Card>
+        </div>
+
+        <div className="mt-8">
+          <Card className="p-8">
+            <h3 className="mb-6 text-xl font-semibold text-foreground">Internship Terms</h3>
+            <ul className="space-y-3">
+              {[
+                'Strict adherence to office hours and professional conduct is expected',
+                'NDA signing is mandatory before project allocation',
+                'Intellectual property created during internship belongs to Qmax Systems',
+                'Internship may be terminated for confidentiality breaches or repeated underperformance'
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-foreground/70">
+                  <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </Card>
         </div>
 
