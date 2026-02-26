@@ -35,7 +35,7 @@ const positions = [
       { category: 'Communication', items: ['Technical Documentation', 'Cross-team Collaboration'] }
     ],
     qualifications: ['B.S. in Electrical Engineering or related field', 'Master\'s degree preferred'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image1.jpg'
   },
   {
     id: 2,
@@ -65,7 +65,7 @@ const positions = [
       { category: 'Tools', items: ['Git', 'JIRA', 'Debuggers', 'IDEs'] }
     ],
     qualifications: ['B.S. in Computer Engineering, Electrical Engineering, or related field'],
-    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image2.png'
   },
   {
     id: 3,
@@ -95,7 +95,7 @@ const positions = [
       { category: 'Languages', items: ['Python', 'C', 'Shell Scripting'] }
     ],
     qualifications: ['B.S. in Computer Science, Engineering, or related field'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image3.png'
   },
   {
     id: 4,
@@ -125,7 +125,7 @@ const positions = [
       { category: 'Measurements', items: ['Network Analyzer', 'Spectrum Analyzer', 'Antenna Measurement'] }
     ],
     qualifications: ['B.S. in Electrical Engineering with RF specialization'],
-    imageUrl: 'https://images.unsplash.com/photo-1508253730651-e5ace80a7025?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image4.png'
   },
   {
     id: 5,
@@ -155,7 +155,7 @@ const positions = [
       { category: 'Design', items: ['DDR Design', 'High-Speed Interfaces', 'Power Delivery'] }
     ],
     qualifications: ['B.S. in Electrical Engineering'],
-    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image5.png'
   },
   {
     id: 6,
@@ -185,7 +185,7 @@ const positions = [
       { category: 'Standards', items: ['IPC Standards', 'Design Rules', 'Manufacturing'] }
     ],
     qualifications: ['B.S. in Electrical Engineering or equivalent experience'],
-    imageUrl: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image6.png'
   },
   {
     id: 7,
@@ -215,7 +215,7 @@ const positions = [
       { category: 'Knowledge', items: ['IPC Standards', 'Component Selection', 'Datasheets'] }
     ],
     qualifications: ['B.S. in Electrical Engineering or related field'],
-    imageUrl: 'https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image7.png'
   },
   {
     id: 8,
@@ -245,7 +245,7 @@ const positions = [
       { category: 'Manufacturing', items: ['DFM', 'GD&T', 'Prototyping', 'Material Selection'] }
     ],
     qualifications: ['B.S. in Mechanical Engineering'],
-    imageUrl: 'https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image8.png'
   },
   {
     id: 9,
@@ -275,7 +275,7 @@ const positions = [
       { category: 'Knowledge', items: ['Design Systems', 'Accessibility', 'User Testing'] }
     ],
     qualifications: ['B.S. in Industrial Design or related field'],
-    imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image9.png'
   },
   {
     id: 10,
@@ -305,7 +305,7 @@ const positions = [
       { category: 'DevOps', items: ['Git', 'Docker', 'AWS', 'CI/CD'] }
     ],
     qualifications: ['B.S. in Computer Science or equivalent experience'],
-    imageUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image10.png'
   },
   {
     id: 11,
@@ -335,7 +335,7 @@ const positions = [
       { category: 'Tools', items: ['Salesforce', 'Excel', 'PowerPoint', 'LinkedIn'] }
     ],
     qualifications: ['B.A. in Business, Marketing, or related field'],
-    imageUrl: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image11.png'
   },
   {
     id: 12,
@@ -363,7 +363,7 @@ const positions = [
       { category: 'Work Style', items: ['Documentation', 'Troubleshooting'] }
     ],
     qualifications: ['Final-year BE / BTech in ECE, EEE, or related discipline'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image12.png'
   },
   {
     id: 13,
@@ -391,7 +391,7 @@ const positions = [
       { category: 'Tools', items: ['JTAG/SWD Debugging', 'Git'] }
     ],
     qualifications: ['Final-year BE / BTech in ECE, CSE, Embedded Systems, or Electrical Engineering'],
-    imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image1.jpg'
   },
   {
     id: 14,
@@ -419,7 +419,7 @@ const positions = [
       { category: 'Software', items: ['ADS or HFSS (preferred)'] }
     ],
     qualifications: ['Final-year BE / BTech in ECE or related field'],
-    imageUrl: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image2.png'
   },
   {
     id: 15,
@@ -447,7 +447,7 @@ const positions = [
       { category: 'Quality', items: ['DFM', 'Library Management', 'Datasheet Reading'] }
     ],
     qualifications: ['Diploma / Final-year BE / BTech in Electronics or related stream'],
-    imageUrl: 'https://images.unsplash.com/photo-1631557121706-92f7ac35a0ce?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image3.png'
   },
   {
     id: 16,
@@ -475,7 +475,7 @@ const positions = [
       { category: 'Collaboration', items: ['Cross-functional Communication'] }
     ],
     qualifications: ['Final-year BE / BTech Mechanical or Bachelor’s in Industrial/Product Design'],
-    imageUrl: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image4.png'
   },
   {
     id: 17,
@@ -503,7 +503,7 @@ const positions = [
       { category: 'Workflow', items: ['Git', 'Debugging', 'Documentation'] }
     ],
     qualifications: ['Final-year BE / BTech in CSE / IT or equivalent'],
-    imageUrl: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image5.png'
   },
   {
     id: 18,
@@ -531,7 +531,7 @@ const positions = [
       { category: 'Tools', items: ['DSO', 'DMM', 'Python'] }
     ],
     qualifications: ['Diploma / Final-year BE / BTech in Electronics, Electrical, or Instrumentation'],
-    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image6.png'
   },
   {
     id: 19,
@@ -559,7 +559,7 @@ const positions = [
       { category: 'Communication', items: ['Client Interaction', 'Reporting'] }
     ],
     qualifications: ['Any Bachelor’s degree; engineering background preferred'],
-    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200'
+    imageUrl: '/careers/image7.png'
   }
 ]
 
@@ -582,13 +582,15 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
             </div>
           </div>
 
-          <div className="hidden h-24 w-40 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 sm:block">
-            <img
-              src={position.imageUrl || 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200'}
-              alt={`${position.title} role preview`}
-              className="h-full w-full object-cover"
-            />
-          </div>
+          {!isExpanded && (
+            <div className="hidden h-24 w-40 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 sm:block">
+              <img
+                src={position.imageUrl || '/careers/image1.jpg'}
+                alt={`${position.title} role preview`}
+                className="h-full w-full object-cover"
+              />
+            </div>
+          )}
 
           <ChevronDown
             className={`h-5 w-5 flex-shrink-0 text-zinc-500 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
@@ -602,7 +604,7 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
           {/* Image */}
           <div className="relative h-48 w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 md:h-64">
             <img
-              src={position.imageUrl || 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200'}
+              src={position.imageUrl || '/careers/image1.jpg'}
               alt={position.title}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
@@ -678,7 +680,8 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
   )
 }
 
-export function CurrentOpenings() {
+export function CurrentOpenings({ hideHeader = false }: { hideHeader?: boolean }) {
+
   const [selectedTab, setSelectedTab] = useState<'all' | 'interns'>('all')
   const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>(() => {
     const initial: Record<number, boolean> = {}
@@ -712,12 +715,14 @@ export function CurrentOpenings() {
   return (
     <section id="openings" className="bg-white py-10 md:py-14">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mb-8">
-          <h2 className="mb-4 text-3xl font-bold text-zinc-900 md:text-4xl">Current Openings</h2>
-          <p className="text-lg text-zinc-600">
-            The following positions are open for full-time roles.
-          </p>
-        </div>
+        {!hideHeader && (
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold text-zinc-900 md:text-4xl">Current Openings</h2>
+            <p className="text-lg text-zinc-600">
+              The following positions are open for full-time roles.
+            </p>
+          </div>
+        )}
 
         {/* Role Filter */}
         <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
