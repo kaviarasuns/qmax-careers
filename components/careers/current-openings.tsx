@@ -34,7 +34,8 @@ const positions = [
       { category: 'Technologies', items: ['Embedded Systems', 'Circuit Design', 'PCB Layout', 'Power Electronics'] },
       { category: 'Communication', items: ['Technical Documentation', 'Cross-team Collaboration'] }
     ],
-    qualifications: ['B.S. in Electrical Engineering or related field', 'Master\'s degree preferred']
+    qualifications: ['B.S. in Electrical Engineering or related field', 'Master\'s degree preferred'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 2,
@@ -63,7 +64,8 @@ const positions = [
       { category: 'Protocols', items: ['UART', 'SPI', 'I2C', 'CAN', 'Ethernet'] },
       { category: 'Tools', items: ['Git', 'JIRA', 'Debuggers', 'IDEs'] }
     ],
-    qualifications: ['B.S. in Computer Engineering, Electrical Engineering, or related field']
+    qualifications: ['B.S. in Computer Engineering, Electrical Engineering, or related field'],
+    imageUrl: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 3,
@@ -92,7 +94,8 @@ const positions = [
       { category: 'Tools', items: ['JIRA', 'Git', 'CAN Analyzer', 'Logic Analyzers'] },
       { category: 'Languages', items: ['Python', 'C', 'Shell Scripting'] }
     ],
-    qualifications: ['B.S. in Computer Science, Engineering, or related field']
+    qualifications: ['B.S. in Computer Science, Engineering, or related field'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 4,
@@ -121,7 +124,8 @@ const positions = [
       { category: 'Protocols', items: ['Bluetooth', 'WiFi', 'LoRaWAN', 'Cellular'] },
       { category: 'Measurements', items: ['Network Analyzer', 'Spectrum Analyzer', 'Antenna Measurement'] }
     ],
-    qualifications: ['B.S. in Electrical Engineering with RF specialization']
+    qualifications: ['B.S. in Electrical Engineering with RF specialization'],
+    imageUrl: 'https://images.unsplash.com/photo-1508253730651-e5ace80a7025?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 5,
@@ -150,7 +154,8 @@ const positions = [
       { category: 'Analysis', items: ['EMI/EMC', 'Crosstalk Analysis', 'Impedance Control'] },
       { category: 'Design', items: ['DDR Design', 'High-Speed Interfaces', 'Power Delivery'] }
     ],
-    qualifications: ['B.S. in Electrical Engineering']
+    qualifications: ['B.S. in Electrical Engineering'],
+    imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 6,
@@ -179,7 +184,8 @@ const positions = [
       { category: 'Design', items: ['Layout Design', 'Routing', 'Component Placement', 'DFM'] },
       { category: 'Standards', items: ['IPC Standards', 'Design Rules', 'Manufacturing'] }
     ],
-    qualifications: ['B.S. in Electrical Engineering or equivalent experience']
+    qualifications: ['B.S. in Electrical Engineering or equivalent experience'],
+    imageUrl: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 7,
@@ -208,7 +214,8 @@ const positions = [
       { category: 'Organization', items: ['Database Management', 'Version Control', 'Documentation'] },
       { category: 'Knowledge', items: ['IPC Standards', 'Component Selection', 'Datasheets'] }
     ],
-    qualifications: ['B.S. in Electrical Engineering or related field']
+    qualifications: ['B.S. in Electrical Engineering or related field'],
+    imageUrl: 'https://images.unsplash.com/photo-1620916297397-a4a5402a3c6c?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 8,
@@ -237,7 +244,8 @@ const positions = [
       { category: 'Analysis', items: ['FEA', 'Thermal Analysis', 'Motion Analysis', 'Assembly Design'] },
       { category: 'Manufacturing', items: ['DFM', 'GD&T', 'Prototyping', 'Material Selection'] }
     ],
-    qualifications: ['B.S. in Mechanical Engineering']
+    qualifications: ['B.S. in Mechanical Engineering'],
+    imageUrl: 'https://images.unsplash.com/photo-1503694978374-8a2fa686963a?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 9,
@@ -266,7 +274,8 @@ const positions = [
       { category: 'Skills', items: ['UI/UX Design', 'Prototyping', 'User Research', 'Wireframing'] },
       { category: 'Knowledge', items: ['Design Systems', 'Accessibility', 'User Testing'] }
     ],
-    qualifications: ['B.S. in Industrial Design or related field']
+    qualifications: ['B.S. in Industrial Design or related field'],
+    imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 10,
@@ -295,7 +304,8 @@ const positions = [
       { category: 'Backend', items: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB'] },
       { category: 'DevOps', items: ['Git', 'Docker', 'AWS', 'CI/CD'] }
     ],
-    qualifications: ['B.S. in Computer Science or equivalent experience']
+    qualifications: ['B.S. in Computer Science or equivalent experience'],
+    imageUrl: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 11,
@@ -324,7 +334,8 @@ const positions = [
       { category: 'Sales', items: ['Lead Generation', 'Sales Pipeline Management', 'Customer Relations'] },
       { category: 'Tools', items: ['Salesforce', 'Excel', 'PowerPoint', 'LinkedIn'] }
     ],
-    qualifications: ['B.A. in Business, Marketing, or related field']
+    qualifications: ['B.A. in Business, Marketing, or related field'],
+    imageUrl: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 12,
@@ -351,7 +362,8 @@ const positions = [
       { category: 'Tools', items: ['Altium or KiCad', 'DSO', 'DMM'] },
       { category: 'Work Style', items: ['Documentation', 'Troubleshooting'] }
     ],
-    qualifications: ['Final-year BE / BTech in ECE, EEE, or related discipline']
+    qualifications: ['Final-year BE / BTech in ECE, EEE, or related discipline'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 13,
@@ -378,7 +390,8 @@ const positions = [
       { category: 'Interfaces', items: ['GPIO', 'UART', 'SPI', 'I2C'] },
       { category: 'Tools', items: ['JTAG/SWD Debugging', 'Git'] }
     ],
-    qualifications: ['Final-year BE / BTech in ECE, CSE, Embedded Systems, or Electrical Engineering']
+    qualifications: ['Final-year BE / BTech in ECE, CSE, Embedded Systems, or Electrical Engineering'],
+    imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 14,
@@ -405,7 +418,8 @@ const positions = [
       { category: 'Tools', items: ['VNA', 'Spectrum Analyzer', 'Signal Generator'] },
       { category: 'Software', items: ['ADS or HFSS (preferred)'] }
     ],
-    qualifications: ['Final-year BE / BTech in ECE or related field']
+    qualifications: ['Final-year BE / BTech in ECE or related field'],
+    imageUrl: 'https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 15,
@@ -432,7 +446,8 @@ const positions = [
       { category: 'Design', items: ['Layout', 'Routing', 'Impedance Basics'] },
       { category: 'Quality', items: ['DFM', 'Library Management', 'Datasheet Reading'] }
     ],
-    qualifications: ['Diploma / Final-year BE / BTech in Electronics or related stream']
+    qualifications: ['Diploma / Final-year BE / BTech in Electronics or related stream'],
+    imageUrl: 'https://images.unsplash.com/photo-1631557121706-92f7ac35a0ce?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 16,
@@ -459,7 +474,8 @@ const positions = [
       { category: 'Design Practice', items: ['Ergonomics', 'Styling', 'Concept Development'] },
       { category: 'Collaboration', items: ['Cross-functional Communication'] }
     ],
-    qualifications: ['Final-year BE / BTech Mechanical or Bachelor’s in Industrial/Product Design']
+    qualifications: ['Final-year BE / BTech Mechanical or Bachelor’s in Industrial/Product Design'],
+    imageUrl: 'https://images.unsplash.com/photo-1536924940846-227afb31e2a5?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 17,
@@ -486,7 +502,8 @@ const positions = [
       { category: 'Backend', items: ['Node.js or Python', 'REST APIs', 'SQL'] },
       { category: 'Workflow', items: ['Git', 'Debugging', 'Documentation'] }
     ],
-    qualifications: ['Final-year BE / BTech in CSE / IT or equivalent']
+    qualifications: ['Final-year BE / BTech in CSE / IT or equivalent'],
+    imageUrl: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 18,
@@ -513,7 +530,8 @@ const positions = [
       { category: 'Interfaces', items: ['UART', 'CAN', 'Ethernet', 'USB'] },
       { category: 'Tools', items: ['DSO', 'DMM', 'Python'] }
     ],
-    qualifications: ['Diploma / Final-year BE / BTech in Electronics, Electrical, or Instrumentation']
+    qualifications: ['Diploma / Final-year BE / BTech in Electronics, Electrical, or Instrumentation'],
+    imageUrl: 'https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&q=80&w=1200'
   },
   {
     id: 19,
@@ -540,16 +558,10 @@ const positions = [
       { category: 'Marketing', items: ['SEO Basics', 'Digital Marketing', 'AI Marketing Awareness'] },
       { category: 'Communication', items: ['Client Interaction', 'Reporting'] }
     ],
-    qualifications: ['Any Bachelor’s degree; engineering background preferred']
+    qualifications: ['Any Bachelor’s degree; engineering background preferred'],
+    imageUrl: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200'
   }
 ]
-
-const categoryImages: Record<string, string> = {
-  Engineering: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200',
-  Design: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=1200',
-  Software: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=1200',
-  Business: 'https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=1200',
-}
 
 function JobCard({ position, isExpanded, onToggle }: { position: typeof positions[0]; isExpanded: boolean; onToggle: () => void }) {
   return (
@@ -572,8 +584,8 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
 
           <div className="hidden h-24 w-40 overflow-hidden rounded-lg border border-zinc-200 bg-zinc-100 sm:block">
             <img
-              src={categoryImages[position.category] || categoryImages['Engineering']}
-              alt={`${position.category} role preview`}
+              src={position.imageUrl || 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200'}
+              alt={`${position.title} role preview`}
               className="h-full w-full object-cover"
             />
           </div>
@@ -590,7 +602,7 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
           {/* Image */}
           <div className="relative h-48 w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 md:h-64">
             <img
-              src={categoryImages[position.category] || categoryImages['Engineering']}
+              src={position.imageUrl || 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200'}
               alt={position.title}
               className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
             />
