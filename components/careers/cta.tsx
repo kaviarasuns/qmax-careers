@@ -1,0 +1,43 @@
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
+import { ArrowRight, Mail } from 'lucide-react'
+
+export function CTA() {
+  return (
+    <section className="py-20 md:py-32">
+      <div className="container mx-auto px-4 md:px-6">
+        <Card className="relative overflow-hidden p-12 md:p-20">
+          {/* Background gradient */}
+          <div className="absolute inset-0 -z-10">
+            <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-primary/20 blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-accent/20 blur-3xl"></div>
+          </div>
+
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl text-foreground">
+              Ready to Make an Impact?
+            </h2>
+
+            <p className="mb-8 text-lg text-foreground/70">
+              Whether you're an experienced engineer or just starting your career, we have opportunities for you. Let's build the future of technology together.
+            </p>
+
+            <div className="flex flex-col gap-4 sm:flex-row justify-center">
+              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                View All Positions <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button size="lg" variant="outline" className="border-primary/30">
+                <Mail className="mr-2 h-4 w-4" />
+                Contact Us
+              </Button>
+            </div>
+
+            <p className="mt-6 text-sm text-foreground/60">
+              Questions? Reach out to our recruitment team at careers@qmaxsys.com
+            </p>
+          </div>
+        </Card>
+      </div>
+    </section>
+  )
+}
