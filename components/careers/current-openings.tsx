@@ -4,7 +4,8 @@ import { useState } from 'react'
 import { Card } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { ChevronDown } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { ChevronDown, Search } from 'lucide-react'
 
 const slugify = (str: string) =>
   str
@@ -569,11 +570,18 @@ const positions = [
   }
 ]
 
-function JobCard({ position, isExpanded, onToggle }: { position: typeof positions[0]; isExpanded: boolean; onToggle: () => void }) {
+type Position = (typeof positions)[number]
+
+function JobCard({ position, isExpanded, onToggle }: { position: Position; isExpanded: boolean; onToggle: () => void }) {
+  const detailsId = `job-details-${position.id}`
+
   return (
     <Card id={slugify(position.title)} className={`overflow-hidden border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}>
-      <div
-        className="cursor-pointer p-6 transition-colors hover:bg-zinc-50"
+      <button
+        type="button"
+        aria-expanded={isExpanded}
+        aria-controls={detailsId}
+        className="w-full cursor-pointer p-6 text-left transition-colors hover:bg-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-500 focus-visible:ring-offset-2"
         onClick={onToggle}
       >
         <div className="flex items-start justify-between gap-4">
@@ -602,11 +610,11 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
             className={`h-5 w-5 flex-shrink-0 text-zinc-500 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
           />
         </div>
-      </div>
+      </button>
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="border-t border-zinc-200 bg-zinc-50 px-6 py-6">
+        <div id={detailsId} className="border-t border-zinc-200 bg-zinc-50 px-6 py-6">
           {/* Desktop: two-column layout. Mobile: single column */}
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
 
@@ -700,17 +708,38 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
 export function CurrentOpenings({ hideHeader = false }: { hideHeader?: boolean }) {
 
   const [selectedTab, setSelectedTab] = useState<'all' | 'interns'>('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [locationFilter, setLocationFilter] = useState('all')
+  const [categoryFilter, setCategoryFilter] = useState('all')
   const [expandedCards, setExpandedCards] = useState<Record<number, boolean>>(() => {
     const initial: Record<number, boolean> = {}
-    positions.forEach(p => (initial[p.id] = true))
+    positions.forEach(p => (initial[p.id] = false))
     return initial
   })
 
-  const filteredPositions =
+  const basePositions =
     selectedTab === 'interns'
       ? positions.filter(p => p.type.toLowerCase().includes('intern'))
       : positions.filter(p => !p.type.toLowerCase().includes('intern'))
 
+  const locations = ['all', ...Array.from(new Set(basePositions.map(p => p.location))).sort()]
+  const categories = ['all', ...Array.from(new Set(basePositions.map(p => p.category))).sort()]
+
+  const normalizedSearch = searchTerm.trim().toLowerCase()
+
+  const filteredPositions = basePositions.filter((position) => {
+    const matchesSearch =
+      normalizedSearch.length === 0 ||
+      `${position.title} ${position.description} ${position.level} ${position.type}`
+        .toLowerCase()
+        .includes(normalizedSearch)
+    const matchesLocation = locationFilter === 'all' || position.location === locationFilter
+    const matchesCategory = categoryFilter === 'all' || position.category === categoryFilter
+
+    return matchesSearch && matchesLocation && matchesCategory
+  })
+
+  const hasActiveFilters = normalizedSearch.length > 0 || locationFilter !== 'all' || categoryFilter !== 'all'
   const isAllExpanded = filteredPositions.length > 0 && filteredPositions.every(p => expandedCards[p.id])
 
   const toggleExpandAll = () => {
@@ -729,6 +758,12 @@ export function CurrentOpenings({ hideHeader = false }: { hideHeader?: boolean }
     setExpandedCards(prev => ({ ...prev, [id]: !prev[id] }))
   }
 
+  const clearFilters = () => {
+    setSearchTerm('')
+    setLocationFilter('all')
+    setCategoryFilter('all')
+  }
+
   return (
     <section id="openings" className="bg-white py-10 md:py-14">
       <div className="container mx-auto px-4 md:px-6">
@@ -742,39 +777,105 @@ export function CurrentOpenings({ hideHeader = false }: { hideHeader?: boolean }
         )}
 
         {/* Role Filter */}
-        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex flex-wrap gap-3">
-            <Button
-              variant={selectedTab === 'all' ? 'default' : 'outline'}
-              onClick={() => setSelectedTab('all')}
-              className={selectedTab === 'all' ? 'border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800' : 'border-zinc-300 text-zinc-700 hover:bg-zinc-100'}
-            >
-              All Roles
-            </Button>
-            <Button
-              variant={selectedTab === 'interns' ? 'default' : 'outline'}
-              onClick={() => setSelectedTab('interns')}
-              className={selectedTab === 'interns' ? 'border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800' : 'border-zinc-300 text-zinc-700 hover:bg-zinc-100'}
-            >
-              Interns
-            </Button>
+        <div className="mb-6 rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-3">
+              <Button
+                variant={selectedTab === 'all' ? 'default' : 'outline'}
+                onClick={() => setSelectedTab('all')}
+                className={selectedTab === 'all' ? 'border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800' : 'border-zinc-300 text-zinc-700 hover:bg-zinc-100'}
+              >
+                All Roles
+              </Button>
+              <Button
+                variant={selectedTab === 'interns' ? 'default' : 'outline'}
+                onClick={() => setSelectedTab('interns')}
+                className={selectedTab === 'interns' ? 'border-zinc-900 bg-zinc-900 text-white hover:bg-zinc-800' : 'border-zinc-300 text-zinc-700 hover:bg-zinc-100'}
+              >
+                Internships
+              </Button>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Badge variant="outline" className="border-zinc-300 bg-white text-zinc-700">
+                {filteredPositions.length} role{filteredPositions.length === 1 ? '' : 's'}
+              </Badge>
+              <Button variant="ghost" onClick={toggleExpandAll} className="text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900">
+                {isAllExpanded ? 'Collapse All' : 'Expand All'}
+              </Button>
+            </div>
           </div>
 
-          <Button variant="ghost" onClick={toggleExpandAll} className="text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900">
-            {isAllExpanded ? 'Collapse All' : 'Expand All'}
-          </Button>
+          <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-4">
+            <div className="relative md:col-span-2">
+              <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
+              <Input
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search by title, level, or keyword"
+                className="border-zinc-300 bg-white pl-9 text-zinc-900 placeholder:text-zinc-500"
+              />
+            </div>
+
+            <select
+              aria-label="Filter by location"
+              value={locationFilter}
+              onChange={(e) => setLocationFilter(e.target.value)}
+              className="h-10 rounded-md border border-zinc-300 bg-white px-3 text-sm text-zinc-800 outline-none transition focus:ring-2 focus:ring-zinc-300"
+            >
+              {locations.map((location) => (
+                <option key={location} value={location}>
+                  {location === 'all' ? 'All Locations' : location}
+                </option>
+              ))}
+            </select>
+
+            <select
+              aria-label="Filter by category"
+              value={categoryFilter}
+              onChange={(e) => setCategoryFilter(e.target.value)}
+              className="h-10 rounded-md border border-zinc-300 bg-white px-3 text-sm text-zinc-800 outline-none transition focus:ring-2 focus:ring-zinc-300"
+            >
+              {categories.map((category) => (
+                <option key={category} value={category}>
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {hasActiveFilters && (
+            <div className="mt-3 flex items-center justify-between gap-3">
+              <p className="text-sm text-zinc-600">Filters applied. Showing matching roles only.</p>
+              <Button variant="ghost" onClick={clearFilters} className="h-8 px-2 text-zinc-700 hover:bg-zinc-200">
+                Clear Filters
+              </Button>
+            </div>
+          )}
         </div>
 
         {/* Positions Grid */}
         <div className="space-y-4">
-          {filteredPositions.map(position => (
-            <JobCard
-              key={position.id}
-              position={position}
-              isExpanded={!!expandedCards[position.id]}
-              onToggle={() => toggleCard(position.id)}
-            />
-          ))}
+          {filteredPositions.length > 0 ? (
+            filteredPositions.map(position => (
+              <JobCard
+                key={position.id}
+                position={position}
+                isExpanded={!!expandedCards[position.id]}
+                onToggle={() => toggleCard(position.id)}
+              />
+            ))
+          ) : (
+            <Card className="border-zinc-200 bg-zinc-50 p-8 text-center">
+              <h3 className="text-lg font-semibold text-zinc-900">No matching roles found</h3>
+              <p className="mt-2 text-sm text-zinc-600">
+                Try adjusting your search terms or clearing filters to see more openings.
+              </p>
+              <Button onClick={clearFilters} className="mt-4 bg-zinc-900 text-white hover:bg-zinc-800">
+                Reset Filters
+              </Button>
+            </Card>
+          )}
         </div>
       </div>
     </section>
