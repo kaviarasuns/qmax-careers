@@ -6,6 +6,12 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { ChevronDown } from 'lucide-react'
 
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+
 const positions = [
   {
     id: 1,
@@ -565,7 +571,7 @@ const positions = [
 
 function JobCard({ position, isExpanded, onToggle }: { position: typeof positions[0]; isExpanded: boolean; onToggle: () => void }) {
   return (
-    <Card className={`overflow-hidden border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}>
+    <Card id={slugify(position.title)} className={`overflow-hidden border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md ${isExpanded ? 'md:col-span-2 lg:col-span-3' : ''}`}>
       <div
         className="cursor-pointer p-6 transition-colors hover:bg-zinc-50"
         onClick={onToggle}
@@ -578,7 +584,7 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
             <p className="mt-2 text-sm text-zinc-600">{position.description}</p>
             <div className="mt-3 flex flex-wrap gap-2">
               <Badge variant="outline" className="border-zinc-300 text-zinc-700">{position.type}</Badge>
-              <Badge className="border border-zinc-300 bg-zinc-100 text-zinc-700 hover:bg-zinc-200">{position.category}</Badge>
+              <Badge variant="outline" className="border-zinc-300 text-zinc-700">{position.category}</Badge>
             </div>
           </div>
 
@@ -600,79 +606,90 @@ function JobCard({ position, isExpanded, onToggle }: { position: typeof position
 
       {/* Expanded Content */}
       {isExpanded && (
-        <div className="space-y-6 border-t border-zinc-200 bg-zinc-50 px-6 py-6">
-          {/* Image */}
-          <div className="relative h-48 w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 md:h-64">
-            <img
-              src={position.imageUrl || '/careers/image1.jpg'}
-              alt={position.title}
-              className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
-            />
-          </div>
+        <div className="border-t border-zinc-200 bg-zinc-50 px-6 py-6">
+          {/* Desktop: two-column layout. Mobile: single column */}
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
 
-          {/* Responsibilities */}
-          <div>
-            <h4 className="mb-3 font-semibold text-zinc-900">Key Responsibilities</h4>
-            <ul className="space-y-2">
-              {position.responsibilities.map((resp, idx) => (
-                <li key={idx} className="flex gap-3 text-sm text-zinc-700">
-                  <span className="font-semibold text-zinc-500">•</span>
-                  <span>{resp}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Left sidebar: Image + Qualifications + CTA */}
+            <div className="flex flex-col gap-5">
+              <div className="relative h-48 w-full overflow-hidden rounded-xl border border-zinc-200 bg-zinc-100 lg:h-56">
+                <img
+                  src={position.imageUrl || '/careers/image1.jpg'}
+                  alt={position.title}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
 
-          {/* Requirements */}
-          <div>
-            <h4 className="mb-3 font-semibold text-zinc-900">Requirements</h4>
-            <ul className="space-y-2">
-              {position.requirements.map((req, idx) => (
-                <li key={idx} className="flex gap-3 text-sm text-zinc-700">
-                  <span className="font-semibold text-zinc-500">•</span>
-                  <span>{req}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+              {/* Qualifications */}
+              <div>
+                <h4 className="mb-3 font-semibold text-zinc-900">Qualifications</h4>
+                <ul className="space-y-2">
+                  {position.qualifications.map((qual, idx) => (
+                    <li key={idx} className="flex gap-3 text-sm text-zinc-700">
+                      <span className="font-semibold text-zinc-500">•</span>
+                      <span>{qual}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-          {/* Skills */}
-          <div>
-            <h4 className="mb-3 font-semibold text-zinc-900">Required Skills</h4>
-            <div className="space-y-4">
-              {position.skills.map((skillGroup, idx) => (
-                <div key={idx}>
-                  <p className="mb-2 text-sm font-medium text-zinc-700">{skillGroup.category}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill, sidx) => (
-                      <Badge key={sidx} variant="outline" className="border-zinc-300 text-xs text-zinc-700">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              ))}
+              {/* CTA */}
+              <div className="mt-auto border-t border-zinc-200 pt-4">
+                <Button className="w-full sm:w-auto bg-zinc-900 text-white hover:bg-zinc-800">
+                  Apply Now
+                </Button>
+              </div>
             </div>
-          </div>
 
-          {/* Qualifications */}
-          <div>
-            <h4 className="mb-3 font-semibold text-zinc-900">Qualifications</h4>
-            <ul className="space-y-2">
-              {position.qualifications.map((qual, idx) => (
-                <li key={idx} className="flex gap-3 text-sm text-zinc-700">
-                  <span className="font-semibold text-zinc-500">•</span>
-                  <span>{qual}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Right content: 2-column sub-grid for details */}
+            <div className="lg:col-span-2 grid grid-cols-1 gap-6 sm:grid-cols-2">
 
-          {/* CTA */}
-          <div className="border-t border-zinc-200 pt-4">
-            <Button className="w-full bg-zinc-900 text-white hover:bg-zinc-800">
-              Apply Now
-            </Button>
+              {/* Responsibilities */}
+              <div className="rounded-lg border border-zinc-200 bg-white p-4">
+                <h4 className="mb-3 font-semibold text-zinc-900">Key Responsibilities</h4>
+                <ul className="space-y-2">
+                  {position.responsibilities.map((resp, idx) => (
+                    <li key={idx} className="flex gap-3 text-sm text-zinc-700">
+                      <span className="font-semibold text-zinc-500">•</span>
+                      <span>{resp}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Requirements */}
+              <div className="rounded-lg border border-zinc-200 bg-white p-4">
+                <h4 className="mb-3 font-semibold text-zinc-900">Requirements</h4>
+                <ul className="space-y-2">
+                  {position.requirements.map((req, idx) => (
+                    <li key={idx} className="flex gap-3 text-sm text-zinc-700">
+                      <span className="font-semibold text-zinc-500">•</span>
+                      <span>{req}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Skills */}
+              <div className="rounded-lg border border-zinc-200 bg-white p-4 sm:col-span-2">
+                <h4 className="mb-3 font-semibold text-zinc-900">Required Skills</h4>
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                  {position.skills.map((skillGroup, idx) => (
+                    <div key={idx}>
+                      <p className="mb-2 text-sm font-medium text-zinc-700">{skillGroup.category}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {skillGroup.items.map((skill, sidx) => (
+                          <Badge key={sidx} variant="outline" className="border-zinc-300 text-xs text-zinc-700">
+                            {skill}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       )}

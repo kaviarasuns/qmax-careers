@@ -1,6 +1,30 @@
+'use client'
+
 import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { Briefcase, ChevronRight, Code2, Cpu } from 'lucide-react'
+
+const slugify = (str: string) =>
+  str
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+
+function scrollToOpening(title: string) {
+  const id = slugify(title)
+  const el = document.getElementById(id)
+  if (!el) return
+
+  const stickyHeader = document.querySelector('header')
+  const headerHeight = stickyHeader ? stickyHeader.getBoundingClientRect().height : 0
+  const top = el.getBoundingClientRect().top + window.scrollY - headerHeight - 100
+
+  window.scrollTo({ top, behavior: 'smooth' })
+
+  // Brief highlight flash
+  el.classList.add('ring-2', 'ring-zinc-400', 'ring-offset-2')
+  setTimeout(() => el.classList.remove('ring-2', 'ring-zinc-400', 'ring-offset-2'), 1500)
+}
 
 export function OpeningsList() {
   const categories = [
@@ -39,9 +63,9 @@ export function OpeningsList() {
 
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto mb-10 max-w-2xl text-center md:mb-14">
-          <Badge className="mb-4 rounded-full border border-zinc-300 bg-zinc-100 px-4 py-1 text-zinc-700 hover:bg-zinc-100">
+          {/* <Badge className="mb-4 rounded-full border border-zinc-300 bg-zinc-100 px-4 py-1 text-zinc-700 hover:bg-zinc-100">
             {totalRoles} Open Roles
-          </Badge>
+          </Badge> */}
           <h2 className="mb-4 text-3xl font-bold tracking-tight text-zinc-900 md:text-5xl">
             Current Openings
           </h2>
@@ -75,9 +99,14 @@ export function OpeningsList() {
 
                 <ul className="space-y-3">
                   {category.roles.map((role) => (
-                    <li key={role} className="flex items-start gap-2.5 text-sm text-zinc-700 md:text-base">
-                      <ChevronRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-zinc-500" />
-                      <span className="font-medium leading-relaxed">{role}</span>
+                    <li key={role}>
+                      <button
+                        onClick={() => scrollToOpening(role)}
+                        className="group/item flex w-full items-start gap-2.5 rounded-lg px-2 py-1.5 text-left text-sm text-zinc-700 transition-all duration-150 hover:bg-zinc-100 hover:text-zinc-900 md:text-base"
+                      >
+                        <ChevronRight className="mt-0.5 h-4 w-4 flex-shrink-0 text-zinc-400 transition-transform duration-150 group-hover/item:translate-x-0.5 group-hover/item:text-zinc-700" />
+                        <span className="font-medium leading-relaxed">{role}</span>
+                      </button>
                     </li>
                   ))}
                 </ul>

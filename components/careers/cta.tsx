@@ -23,14 +23,19 @@ export function CTA() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row justify-center">
-              <Button size="lg" variant="outline" className="border-primary/30">
-                <Mail className="mr-2 h-4 w-4" />
-                Contact Us
-              </Button>
+              <a href="mailto:careers@qmaxsys.com">
+                <Button size="lg" variant="outline" className="border-primary/30">
+                  <Mail className="mr-2 h-4 w-4" />
+                  Apply Us
+                </Button>
+              </a>
             </div>
 
             <p className="mt-6 text-sm text-foreground/60">
-              Questions? Reach out to our recruitment team at careers@qmaxsys.com
+              Questions? Reach out to our recruitment team at{' '}
+              <a href="mailto:careers@qmaxsys.com" className="underline underline-offset-2 hover:text-foreground/80 transition-colors">careers@qmaxsys.com</a>
+              {' '}or call us at{' '}
+              <a href="tel:+917305450580" className="underline underline-offset-2 hover:text-foreground/80 transition-colors">+91 73054 50580</a>
             </p>
           </div>
         </Card>
